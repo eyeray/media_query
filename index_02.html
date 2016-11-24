@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>미디어쿼리에 대해서 알아보자</title>
+    <style>
+        @charset “utf-8”;
+
+        /* All Device */
+        /*모든 해상도를 위한 공통 코드를 작성한다. 모든 해상도에서 이 코드가 실행됨.*/
+        *{
+            margin: 0;
+            padding:0;
+        }
+        body{
+            background: url(images/960grid.png) 0 0 no-repeat;
+        }
+        #wrap{
+            width:100vw;
+            height:100vh;
+            background:rgba(0,0,0,0.5);
+            /*배경색이 회색 반투명으로 변화*/
+        }
+        .box{
+
+            height:50px;
+            border-radius: 5px;
+            background:rgba(255,0,0,0.5);
+            text-align: center;
+            line-height: 100px;
+            color:white;
+
+        }
+
+
+        /* Mobile Device */
+        /*768px 미만 해상도의 모바일 기기를 위한 코드를 작성한다.
+          모든 해상도에서 이 코드가 실행됨. 미디어 쿼리를 지원하지 않는
+          모바일 기기를 위해 미디어 쿼리 구문을 사용하지 않는다.*/
+          [class*="col-"] {
+              width: 100%;
+          }
+
+
+        /* Tablet Device */
+        @media all and (min-width:768px) and (max-width:1024px) {
+        /*사용자 해상도가 768px 이상이고 1024px 이하일 때 이 코드가 실행됨.
+        아이패드 또는 비교적 작은 해상도의 랩탑이나 데스크톱에 대응하는 코드를 작성한다.*/
+        /*12단으로 그리드뷰를 구성*/
+            .col-t-1  {width: 8.333333333333333%;}
+            .col-t-2  {width: 16.66666666666667%;}
+            .col-t-3  {width: 25%;}
+            .col-t-4  {width: 33.33333333333333%;}
+            .col-t-5  {width: 41.66666666666667%;}
+            .col-t-6  {width: 50%;}
+            .col-t-7  {width: 58.33333333333333%;}
+            .col-t-8  {width: 66.66666666666667%;}
+            .col-t-9  {width: 75%;}
+            .col-t-10 {width: 83.33333333333333%;}
+            .col-t-11 {width: 91.66666666666667%;}
+            .col-t-12 {width: 100%;}
+
+            #wrap{
+                width:100vw;
+                height:100vh;
+                background:rgba(255,100,0,0.5);
+                /*배경색이 오렌지 반투명으로 변화*/
+            }
+        }
+
+        /* Desktop Device */
+        @media all and (min-width:1025px) {
+        /*사용자 해상도가 1025px 이상일 때 이 코드가 실행됨.
+        1025px 이상의 랩탑 또는 데스크톱에 대응하는 코드를 작성한다.*/
+            .col-p-1  {width: 8.333333333333333%;}
+            .col-p-2  {width: 16.66666666666667%;}
+            .col-p-3  {width: 25%;}
+            .col-p-4  {width: 33.33333333333333%;}
+            .col-p-5  {width: 41.66666666666667%;}
+            .col-p-6  {width: 50%;}
+            .col-p-7  {width: 58.33333333333333%;}
+            .col-p-8  {width: 66.66666666666667%;}
+            .col-p-9  {width: 75%;}
+            .col-p-10 {width: 83.33333333333333%;}
+            .col-p-11 {width: 91.66666666666667%;}
+            .col-p-12 {width: 100%;}
+
+            #wrap{
+                width:100vw;
+                height:100vh;
+                background:rgba(255,0,0,0.5);
+                /*배경색이 붉은색 반투명으로 변화*/
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box col-p-1">
+            객체
+        </div>
+        <div class="box col-p-2">
+            객체
+        </div>
+        <div class="box col-p-3">
+            객체
+        </div>
+        <div class="box col-p-4">
+            객체
+        </div>
+        <div class="box col-p-5">
+            객체
+        </div>
+        <div class="box col-p-6">
+            객체
+        </div>
+        <div class="box col-p-7">
+            객체
+        </div>
+        <div class="box col-p-8">
+            객체
+        </div>
+        <div class="box col-p-9">
+            객체
+        </div>
+        <div class="box col-p-10">
+            객체
+        </div>
+        <div class="box col-p-11">
+            객체
+        </div>
+        <div class="box col-p-12">
+            객체
+        </div>
+    </div>
+</body>
+</html>
